@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Car</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+        <a href="main.html" class="w3-bar-item w3-button">HOME</a>
+        <a href="#" class="w3-bar-item w3-button">RATES</a>
+        <a href="#" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+
+    <div id="main">
+
+        <div class="w3-teal">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <div class="w3-container">
+                <div class="w3-container w3-teal">
+                    <h1>BMW i8</h1>
+                    <h5>The BMW i8 has 1 Petrol Engine on offer. The Petrol engine is 1499 cc. It is available with the Automatic transmission. Depending upon the variant and fuel type the i8 has a mileage of 47.45 kmpl. The i8 is a 4 seater Hybrid and has
+                        a length of 4689mm, width of 2218mm and a wheelbase of 2850mm.
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <h2 class="w3-center">Automatic Slideshow</h2>
+
+    <div class="w3-content w3-section" style="max-width:500px">
+        <img class="mySlides" src="images/cover1.jpg" style="width:100%">
+        <img class="mySlides" src="images/cover1A.jpg" style="width:100%">
+        <img class="mySlides" src="images/cover1B.jpg" style="width:100%">
+        <img class="mySlides" src="images/cover1C.jpg" style="width:100%">
+    </div>
+
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+</html>
