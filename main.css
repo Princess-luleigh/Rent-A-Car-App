@@ -381,3 +381,58 @@ img {
         font-size: 11px
     }
 }
+
+.w3-section {
+    display: flex;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.imageSlide {
+    width: 100%;
+    padding-right: 20px;
+}
+
+.sideText {
+    width: 60%;
+}
+
+.label {
+    background-color: teal;
+    background-size: 100%;
+    margin-left: 10px;
+    border: none;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(7, 87, 90);
+    padding: 2rem 0;
+    position: relative;
+}
+
+.up {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: turquoise;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+
+.up i {
+    color: turquoise;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.copyright p {
+    font-size: 1.4rem;
+}

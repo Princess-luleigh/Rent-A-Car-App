@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Car</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+        <a href="main.html" class="w3-bar-item w3-button">HOME</a>
+        <a href="#" class="w3-bar-item w3-button">RATES</a>
+        <a href="#" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+
+    <div id="main">
+
+        <div class="w3-teal">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+            <div class="w3-container">
+                <div class="w3-container w3-teal">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <h2 class="w3-center">Description </h2>
+
+    <div class="w3-content w3-section" style="max-width:1000px">
+        <div class="imageSlide">
+            <img class="mySlides" src="images/cover4.jpg" style="width:100%">
+            <img class="mySlides" src="images/cover4A.jpg" style="width:100%">
+            <img class="mySlides" src="images/cover4B.jpg" style="width:100%">
+            <img class="mySlides" src="images/cover4C.jpg" style="width:100%">
+        </div>
+
+        <div class="sideText" style="height: 6px;">
+            <h1>Hyundai H1 Minibus</h1>
+            <h5 style="display: flexbox;">The H1 Wagon has some pretty impressive engine specifications, which include a displacement of 2,359 cc's for the petrol engine and 2,497 cc's for the diesel engine. Additionally the petrol engine has a power output of 126 kW's while the diesel
+                engine pushes out 125 kW's of power.
+                <h4>Select booking dates:</h4>
+                <div class="label">
+                    <form action="payments.html" style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px;">
+                        <label for="datemax"><h6 >Pick-up date:</h6></label>
+                        <input type="date" id="datemax" name="datemax" max="1979-12-31"><br>
+
+                        <label for="datemin"><h6>Drop off date:</h6></label>
+                        <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+        </div>
+    </div>
+
+    <footer class="copyright">
+        <div class="up" id="up">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <p style="color: white;">
+            &copy: 2020 Princess Baloyi
+        </p>
+    </footer>
+
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+
+</body>
+
+</html>

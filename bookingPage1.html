@@ -29,10 +29,7 @@
             <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
             <div class="w3-container">
                 <div class="w3-container w3-teal">
-                    <h1>BMW i8</h1>
-                    <h5>The BMW i8 has 1 Petrol Engine on offer. The Petrol engine is 1499 cc. It is available with the Automatic transmission. Depending upon the variant and fuel type the i8 has a mileage of 47.45 kmpl. The i8 is a 4 seater Hybrid and has
-                        a length of 4689mm, width of 2218mm and a wheelbase of 2850mm.
-                    </h5>
+
                 </div>
             </div>
         </div>
@@ -41,14 +38,45 @@
 
 
 
-    <h2 class="w3-center">Automatic Slideshow</h2>
+    <h2 class="w3-center">Description </h2>
 
-    <div class="w3-content w3-section" style="max-width:500px">
-        <img class="mySlides" src="images/cover1.jpg" style="width:100%">
-        <img class="mySlides" src="images/cover1A.jpg" style="width:100%">
-        <img class="mySlides" src="images/cover1B.jpg" style="width:100%">
-        <img class="mySlides" src="images/cover1C.jpg" style="width:100%">
+    <div class="w3-content w3-section" style="max-width:1000px">
+        <div class="imageSlide">
+            <img class="mySlides" src="images/cover1.jpg" style="width:100%">
+            <img class="mySlides" src="images/cover1A.jpg" style="width:100%">
+            <img class="mySlides" src="images/cover1B.jpg" style="width:100%">
+            <img class="mySlides" src="images/cover1C.jpg" style="width:100%">
+        </div>
+
+        <div class="sideText" style="height: 6px;">
+            <h1>BMW i8</h1>
+            <h5 style="display: flexbox;">The BMW i8 has 1 Petrol Engine on offer. The Petrol engine is 1499 cc. It is available with the Automatic transmission. Depending upon the variant and fuel type the i8 has a mileage of 47.45 kmpl. The i8 is a 4 seater Hybrid and has a length
+                of 4689mm, width of 2218mm and a wheelbase of 2850mm.
+            </h5>
+
+            <h4>Select booking dates:</h4>
+            <div class="label">
+                <form action="payments.html" style="padding-top: 10px; padding-bottom: 10px; padding-left: 10px;">
+                    <label for="datemax"><h6 >Pick-up date:</h6></label>
+                    <input type="date" id="datemax" name="datemax" max="1979-12-31"><br>
+
+                    <label for="datemin"><h6>Drop off date:</h6></label>
+                    <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     </div>
+
+    <footer class="copyright">
+        <div class="up" id="up">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <p style="color: white;">
+            &copy: 2020 Princess Baloyi
+        </p>
+    </footer>
 
     <script>
         function w3_open() {
@@ -81,6 +109,8 @@
             setTimeout(carousel, 2000); // Change image every 2 seconds
         }
     </script>
+
+
 </body>
 
 </html>
